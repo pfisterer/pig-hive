@@ -1,6 +1,6 @@
 # Version: 0.0.1
 FROM sequenceiq/hadoop-docker:2.7.1
-MAINTAINER Andy C “andy@r2-dvd.org”
+MAINTAINER Andy C “aecobley@dundee.ac.uk”
 RUN curl http://apache.mirror.anlx.net/pig/latest/pig-0.16.0.tar.gz | tar -zx -C /usr/local
 ENV PATH /usr/local/pig-0.16.0/bin:$PATH
 ENV PATH /usr/local/hadoop/bin:$PATH
