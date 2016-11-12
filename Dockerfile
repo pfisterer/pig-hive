@@ -6,4 +6,7 @@ ENV PATH /usr/local/pig-0.16.0/bin:$PATH
 ENV PATH /usr/local/hadoop/bin:$PATH
 RUN curl http://apache.mirror.anlx.net/hive/stable/apache-hive-1.2.1-bin.tar.gz | tar -zx -C /usr/local
 ENV PATH /usr/local/apache-hive-1.2.1-bin/bin:$PATH
-
+EXPOSE 10020
+EXPOSE 50070
+EXPOSE 50030
+EXPOSE 8088
