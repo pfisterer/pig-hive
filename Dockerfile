@@ -1,14 +1,11 @@
-# Version: 0.0.1
-FROM farberg/hadoop-docker:latest
-MAINTAINER Andy C "aecobley@dundee.ac.uk", now Dennis Pfisterer (https://github.com/pfisterer/)
+FROM harisekhon/hadoop:latest
+MAINTAINER Dennis Pfisterer (https://github.com/pfisterer/)
 
 RUN curl http://apache.mirror.anlx.net/pig/latest/pig-0.17.0.tar.gz | tar -zx -C /usr/local
 ENV PATH /usr/local/pig-0.17.0/bin:$PATH
 
-RUN curl http://apache.mirror.anlx.net/hive/stable/apache-hive-1.2.2-bin.tar.gz | tar -zx -C /usr/local
+RUN curl http://ftp-stud.hs-esslingen.de/pub/Mirrors/ftp.apache.org/dist/hive/hive-1.2.2/apache-hive-1.2.2-bin.tar.gz | tar -zx -C /usr/local
 ENV PATH /usr/local/apache-hive-1.2.2-bin/bin:$PATH
-
-ENV JAVA_TOOL_OPTIONS -Xmx1G
 
 EXPOSE 10020
 EXPOSE 50070
